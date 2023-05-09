@@ -1,0 +1,11 @@
+﻿@model Article
+
+@{
+    var localDateTime = Model.CreatedDate.ToLocalTime();
+}
+
+<tr>
+    <td>@Model.Title</td>
+    <td>@Model.Author</td>
+    <td>@localDateTime.ToLongDateString() @localDateTime.ToShortTimeString()</td>
+</tr>
